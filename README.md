@@ -4,6 +4,9 @@ removes raw(on-ASCII) text, and adds footnotes. currently designed for WordPress
 ## Main class: MainFrame.java
 the classes in the package are a stalled, very incomplete attempt at inproving functionality. You probably should just ignore it.
 
+https://drive.google.com/open?id=1x9jCstWyNEkL6kvA7Z1X_l1b27o-S4Ue
+Compiled as of Jan 2018
+
 ## How to use
 
 Paste any text into the textbox on the left, and the program will remove all lines that contain no alphanumeric characters.
