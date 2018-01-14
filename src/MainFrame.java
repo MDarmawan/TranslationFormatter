@@ -14,6 +14,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+/**
+ * 
+ * @author MDarmawan
+ *
+ */
 public class MainFrame extends JApplet implements ActionListener {
 
 	/**
@@ -26,8 +31,18 @@ public class MainFrame extends JApplet implements ActionListener {
 	private int numFtnH=0;
 	private int numLines=0;
 
+	/*
+	 * Used to generate footnotes, with a link to and from the footnotes.
+	 */
 	public static final String tag="h";
-	public static final String tagH="q";//Not working:
+	
+	
+	/*
+	 * just random inline block comments.
+	 * Was used to list lines where I was unsure of the line.
+	 * Adds a separate footnote below the TL notes 
+	 */
+	public static final String tagH="q";
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -189,14 +204,15 @@ public class MainFrame extends JApplet implements ActionListener {
 			}
 			out+=l+"\n";
 		}
-		out+="<hr/>\nTranslator needs help\n";
-		out+="<ol>\n";
-		numFtnH=hq.size();
-		//System.out.println(numFtn);
-		for(int i=1;i<=numFtnH;i++){
-			out+="<li>"+hq.poll()+TLftnH(i)+"</li>\n";
-		}
-		out+="</ol>\n<!--end-->";
+		
+//		out+="<hr/>\nTranslator needs help\n";
+//		out+="<ol>\n";
+//		numFtnH=hq.size();
+//		//System.out.println(numFtn);
+//		for(int i=1;i<=numFtnH;i++){
+//			out+="<li>"+hq.poll()+TLftnH(i)+"</li>\n";
+//		}
+//		out+="</ol>\n<!--end-->";
 		//System.out.println(out);
 		scan.close();
 		return out;
@@ -206,7 +222,8 @@ public class MainFrame extends JApplet implements ActionListener {
 		return "<sup><a href=\"#ftn"+i+"\" id=\"tl"+i+"\" title=\""+alt+"\">["+i+"]</a></sup>";
 	}
 	private static String TLanchorH(int i, String alt){
-		return "<sup><a href=\"#ftnH"+i+"\" id=\"hn"+i+"\" title=\""+alt+"\">[?"+i+"?]</a></sup>";
+		return "";
+//		return "<sup><a href=\"#ftnH"+i+"\" id=\"hn"+i+"\" title=\""+alt+"\">[?"+i+"?]</a></sup>";
 	}
 
 
