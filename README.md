@@ -17,3 +17,4 @@ Output will show up on the right.
 ## Disclaimers
 
 I haven't touched this code in about a year. Might have forgotten to comment/uncomment random stuff.
+This isn't going to be maintained much.
